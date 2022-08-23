@@ -1,0 +1,47 @@
+@use "src/styles/vars";
+
+.landing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1em 0;
+  background-color: vars.$dark-gray;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+  }
+
+  &-left {
+    display: flex;
+    align-items: flex-end;
+    
+    .menu-link {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: black;
+
+      &--active {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: vars.$flash-color;
+      }
+
+      &--coming-soon {
+        font-size: 0.6em;
+        margin-left: 0.3em;
+        border: 1px solid vars.$flash-color;
+        border-radius: 10px;
+        padding: 0.3em 0.5em;
+        color: vars.$flash-color;
+        background-color: white;
+      }
+
+      &--disabled {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
